@@ -1,0 +1,23 @@
+
+# VCS Use Report.
+<br>
+During the development and implementation of MusoPlan, one organisational requirement was the use of a Version Control System (VCS) throughout the project. A second requirement is to use Jest as our automated software testing framework, primarily used in the testing of Javascript code. I have used GIT VCS through this project, the reasons for choosing GIT VCS is because it is free, user friendly and it integrates with Jest, our chosen automated software testing framework.
+<br>
+Git Hub is new to me, having never used it before I had to create an account to get started which was very straight forward. I was required to create a new repository and then thought how to manage this repository through Terminal inside Visual Studio Code. To have my code usable and able to later push it to my new Git repository I had to fist install Git and then initialise git in Terminal inside my project within Visual Studio Code by means of using the command ‘git init’.
+<br>
+Once this was done, there were more steps I had to take in order for my code on my local computer to talk to (be able to sync with) my new Git Hub repository online. I had to copy the url from my new Git Hub repository and paste it after the Terminal command ‘git clone’.
+This command cloned my Git Hub repository to my local folders on my MacBook.
+<br>
+Another organisational requirement was to develop MusoPlan on a testing branch of the main repository and later merge it to ‘main’, instead of creating it all in the main repository.
+It is possible to create a new branch through Terminal using the command “git branch ‘name of new branch’”.
+<br>
+Once the branch is created and we are in that new branch we can work on our code. Whenever I added a new function to my code I wanted to stage the code, this means to ‘push’ it and ‘commit’ it to my Git Hub repository (the remote repository - accessible by the team when working in a team). The reason we do this is to create Version Control as we develop/edit code. Every time we push and commit code up to our repository it records a ‘commit log’ this commit log is recorded by the person committing the change to the code and a message is recorded with a note and time of the changes made. This is very important so that if our code ends up off track from the original vision we can backtrack and find the last worthy code and keep going from there rather than starting from scratch or trying to remember all the changes that you’ve done. Staging is vital when working in a team as it provides a history of what has been done and keeps the whole team up to date. The way we stage and push the changes is by using the commands 'git add “file name”’ + ‘git commit -m “message to commit with the fie push”’ + ‘git push origin “branch to push the file to”’.
+<br>
+I found this very easy to do and was able to know exactly what I did last and what I was up to. The only real problem I came across was when I pushed 2 new functions to my repository then releasing later I made 2 errors. Instead of fixing the error and pushing the fixed code up to my repository, I thought I’d try to undo the last push and commit using the command ‘git reset —hard Head~2’. This command didn’t seem to work so I tried it again before I realised it had reverted back 4 versions on my local computer not touching my Git Hub repository. In order to fix this problem I pulled my repository and this clean wiped and updated my local directory to the same as my Git Hub repository once again and I continued from there once again.
+<br>
+‘Forking’ and ‘Pull requests’’
+While we haven’t had to use these last two I thought I should make mention of them with a brief summary of what they are used for.
+<br>
+Forking is done by someone that doesn’t have direct editing acmes to the project. In essence what they are doing when forking is creating a direct copy of the original code so that they can edit and make changes to the code without effecting the owners original code.
+<br>
+A ‘Pull request’ can then be made by the person that forked and made their own changes to the code. This ‘Pull request’ can be sent to the original owner of the code, they can review the ‘Pull request’ which details the changes made and they can decide to either approve the changes and the pull request back to the central repository or not. Accepting the changes and the ‘Pull request’ will update the code with the approved code.
